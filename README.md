@@ -1,6 +1,6 @@
 # Cryptocurrency-Token-Creation
 
-In this project we're going to create a Cryptocurrency token from scracth with mint and burn features. 
+In this project we're going to create a Cryptocurrency token from scratch with mint and burn features. 
 
 pragma solidity ^0.8.0;
 contract MyToken {
