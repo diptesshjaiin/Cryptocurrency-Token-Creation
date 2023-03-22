@@ -8,9 +8,11 @@ contract MyToken {
 string public name;
 string public symbol;
 uint public totalSupply;
+
 These are the public variables that store the details about our token. name and symbol are both strings, while totalSupply is an unsigned integer (uint). By making them public, we can access their values from outside the contract.
 
 mapping(address => uint) public balanceOf;
+
 This is a mapping that associates addresses with balances. Each address corresponds to a uint value, which represents the number of tokens that the address holds. By making it public, we can access the balance of any address from outside the contract.
 
 constructor(string memory _name, string memory _symbol, uint _totalSupply) {
@@ -30,6 +32,7 @@ function mint(address _to, uint _value) public {
     totalSupply += _value;
     balanceOf[_to] += _value;
 }
+
 The mint() function takes an address and a value as parameters, and increases the total supply by the given value, while also increasing the balance of the specified address. 
 
 When the function is called, it adds the _value parameter to the totalSupply variable, effectively creating new tokens. It also adds the same _value parameter to the balanceOf mapping at the _to address, which means that the address now has more tokens.
