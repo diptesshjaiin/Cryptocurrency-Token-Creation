@@ -49,4 +49,4 @@ It takes two parameters: the address to burn tokens from, and the number of toke
 
 When the function is called, it first checks if the _from address has enough tokens to burn. If the balance of _from is greater than or equal to the _value parameter, the function subtracts the _value parameter from both the totalSupply variable and the _from address's balance in the balanceOf mapping.
 
-If the balance of _from is not enough, the function throws an error message using the require() function, which ensures that a certain condition is met before executing the rest of the code.
+If the balance of _from is not enough, the function throws an error message stating 'Not enough balance to burn'.
